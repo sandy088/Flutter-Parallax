@@ -28,7 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/bg.jpg"),
+            image: NetworkImage(
+                "https://images.unsplash.com/photo-1608730262450-cfdc8ac70cf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHN1YnRsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"),
             fit: BoxFit.cover,
           ),
         ),
@@ -42,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   SizedBox(height: 30),
                   Text(
-                    'Vincent\nvan Gogh',
+                    'Sandeep\nSingh Sidhu',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 50,
@@ -51,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    '30 March 1853-29 July 1890',
+                    '19 Dec 2022',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -60,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Vincent Willem van Gogh was a Dutch post-impressionist painter who posthumously became one of the most famous and influential figures in the history of Western art.',
+                    'Lets play with flutter, in this app I am going to implement parallex effect in horizontal Order!!',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 15,
@@ -76,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20, bottom: 20),
                   child: Text(
-                    'Highlight Paintings',
+                    'Latest Posts ... 😎🌟',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -98,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset(
+                                  child: Image.network(
                                     paintings[i]['image'],
                                     height: 370,
                                     fit: BoxFit.cover,
